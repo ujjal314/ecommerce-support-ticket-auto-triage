@@ -1,0 +1,79 @@
+{
+  "random_state": 42,
+  "supported_rows": 23323,
+  "split_sizes": {
+    "train": 16325,
+    "validation": 3499,
+    "test": 3499
+  },
+  "routing_label_counts": {
+    "refunds_cancellations": 7878,
+    "account_technical": 6882,
+    "shipping_logistics": 4865,
+    "damaged_missing_items": 2707,
+    "human_triage_unknown": 991
+  },
+  "routing_labels": [
+    "refunds_cancellations",
+    "damaged_missing_items",
+    "shipping_logistics",
+    "account_technical",
+    "human_triage_unknown"
+  ],
+  "supported_intents": [
+    "cancel_order",
+    "change_account",
+    "close_account",
+    "damaged_delivery",
+    "delivery_issue",
+    "delivery_time",
+    "human_agent",
+    "missing_item",
+    "open_account",
+    "order_history",
+    "recover_password",
+    "refund_policy",
+    "refund_status",
+    "request_refund",
+    "return_policy",
+    "return_product",
+    "return_product_in_store",
+    "return_product_online",
+    "shipping_costs",
+    "technical_issue",
+    "track_delivery",
+    "track_order",
+    "use_app",
+    "wrong_item"
+  ],
+  "unsupported_intent_counts": {
+    "add_product": 953,
+    "availability": 962,
+    "availability_in_store": 754,
+    "availability_online": 989,
+    "change_order": 961,
+    "customer_service": 990,
+    "exchange_product": 984,
+    "exchange_product_in_store": 987,
+    "pay": 981,
+    "payment_issue": 995,
+    "payment_methods": 994,
+    "product_information": 967,
+    "product_issue": 992,
+    "remove_product": 983,
+    "request_invoice": 1000,
+    "request_right_to_rectification": 986,
+    "sales_period": 981,
+    "store_location": 924,
+    "store_opening_hours": 990,
+    "submit_feedback": 990,
+    "submit_product_feedback": 994,
+    "submit_product_idea": 994
+  },
+  "synthetic_metadata": {
+    "order_value": true,
+    "customer_tier": true,
+    "warning": "Randomly generated demonstration values; not genuine customer or order records."
+  },
+  "duplicate_texts_removed_before_splitting": true
+}

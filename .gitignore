@@ -1,0 +1,32 @@
+
+# Virtual environment and Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets and local configuration
+.env
+!.env.example
+
+# Local datasets
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model weights and checkpoints
+models/checkpoints/
+models/*.pt
+models/*.pth
+models/*.onnx
+
+# Generated files
+artifacts/*.pkl
+artifacts/*.joblib
+artifacts/*.pt
+artifacts/*.pth
+artifacts/*.onnx
+*.log
+.DS_Store

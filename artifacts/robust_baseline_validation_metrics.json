@@ -1,0 +1,11 @@
+{
+  "evaluation_split": "validation",
+  "baseline_word_only": {
+    "accuracy": 0.9943292045963289,
+    "macro_f1": 0.9951068961221042
+  },
+  "word_and_character_tfidf": {
+    "accuracy": 0.9992538427100432,
+    "macro_f1": 0.9993740944665852
+  }
+}

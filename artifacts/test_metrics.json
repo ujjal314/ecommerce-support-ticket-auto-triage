@@ -1,0 +1,259 @@
+{
+  "model": "TF-IDF + Logistic Regression",
+  "evaluation_split": "test",
+  "test_rows": 6702,
+  "accuracy": 0.9941808415398389,
+  "macro_f1": 0.9952199768375408,
+  "labels": [
+    "account_technical",
+    "customer_feedback",
+    "damaged_missing_items",
+    "human_triage_unknown",
+    "order_management",
+    "payments_billing",
+    "product_catalog_availability",
+    "refunds_cancellations",
+    "sales_promotions",
+    "shipping_logistics",
+    "store_information"
+  ],
+  "classification_report": {
+    "account_technical": {
+      "precision": 1.0,
+      "recall": 0.9961277831558567,
+      "f1-score": 0.9980601357904947,
+      "support": 1033.0
+    },
+    "customer_feedback": {
+      "precision": 0.9933333333333333,
+      "recall": 1.0,
+      "f1-score": 0.9966555183946488,
+      "support": 447.0
+    },
+    "damaged_missing_items": {
+      "precision": 0.9975429975429976,
+      "recall": 1.0,
+      "f1-score": 0.998769987699877,
+      "support": 406.0
+    },
+    "human_triage_unknown": {
+      "precision": 0.9955357142857143,
+      "recall": 1.0,
+      "f1-score": 0.9977628635346756,
+      "support": 446.0
+    },
+    "order_management": {
+      "precision": 1.0,
+      "recall": 0.9948453608247423,
+      "f1-score": 0.9974160206718347,
+      "support": 582.0
+    },
+    "payments_billing": {
+      "precision": 1.0,
+      "recall": 0.9983221476510067,
+      "f1-score": 0.9991603694374476,
+      "support": 596.0
+    },
+    "product_catalog_availability": {
+      "precision": 0.9892086330935251,
+      "recall": 0.9981851179673321,
+      "f1-score": 0.993676603432701,
+      "support": 551.0
+    },
+    "refunds_cancellations": {
+      "precision": 0.9965659340659341,
+      "recall": 0.982396750169262,
+      "f1-score": 0.9894306171155813,
+      "support": 1477.0
+    },
+    "sales_promotions": {
+      "precision": 0.9932432432432432,
+      "recall": 1.0,
+      "f1-score": 0.9966101694915255,
+      "support": 147.0
+    },
+    "shipping_logistics": {
+      "precision": 0.9745308310991957,
+      "recall": 0.9958904109589041,
+      "f1-score": 0.9850948509485095,
+      "support": 730.0
+    },
+    "store_information": {
+      "precision": 0.9930555555555556,
+      "recall": 0.9965156794425087,
+      "f1-score": 0.9947826086956522,
+      "support": 287.0
+    },
+    "accuracy": 0.9941808415398389,
+    "macro avg": {
+      "precision": 0.9939105674745,
+      "recall": 0.9965712045608737,
+      "f1-score": 0.9952199768375408,
+      "support": 6702.0
+    },
+    "weighted avg": {
+      "precision": 0.9942456632240252,
+      "recall": 0.9941808415398389,
+      "f1-score": 0.9941850295623368,
+      "support": 6702.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1029,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      447,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      406,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      446,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      579,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      595,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      550,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      6,
+      1451,
+      0,
+      16,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      147,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      727,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      286
+    ]
+  ],
+  "confusion_matrix_label_order": [
+    "account_technical",
+    "customer_feedback",
+    "damaged_missing_items",
+    "human_triage_unknown",
+    "order_management",
+    "payments_billing",
+    "product_catalog_availability",
+    "refunds_cancellations",
+    "sales_promotions",
+    "shipping_logistics",
+    "store_information"
+  ]
+}

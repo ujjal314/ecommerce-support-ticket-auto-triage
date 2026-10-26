@@ -1,0 +1,259 @@
+{
+  "model": "Word + Character TF-IDF + Logistic Regression",
+  "evaluation_split": "test",
+  "test_rows": 6702,
+  "accuracy": 0.9994031632348552,
+  "macro_f1": 0.9995876804125113,
+  "labels": [
+    "account_technical",
+    "customer_feedback",
+    "damaged_missing_items",
+    "human_triage_unknown",
+    "order_management",
+    "payments_billing",
+    "product_catalog_availability",
+    "refunds_cancellations",
+    "sales_promotions",
+    "shipping_logistics",
+    "store_information"
+  ],
+  "classification_report": {
+    "account_technical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1033.0
+    },
+    "customer_feedback": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 447.0
+    },
+    "damaged_missing_items": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 406.0
+    },
+    "human_triage_unknown": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 446.0
+    },
+    "order_management": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 582.0
+    },
+    "payments_billing": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 596.0
+    },
+    "product_catalog_availability": {
+      "precision": 0.9963833634719711,
+      "recall": 1.0,
+      "f1-score": 0.9981884057971014,
+      "support": 551.0
+    },
+    "refunds_cancellations": {
+      "precision": 1.0,
+      "recall": 0.997291807718348,
+      "f1-score": 0.9986440677966102,
+      "support": 1477.0
+    },
+    "sales_promotions": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 147.0
+    },
+    "shipping_logistics": {
+      "precision": 0.9972677595628415,
+      "recall": 1.0,
+      "f1-score": 0.9986320109439124,
+      "support": 730.0
+    },
+    "store_information": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 287.0
+    },
+    "accuracy": 0.9994031632348552,
+    "macro avg": {
+      "precision": 0.9994228293668012,
+      "recall": 0.999753800701668,
+      "f1-score": 0.9995876804125113,
+      "support": 6702.0
+    },
+    "weighted avg": {
+      "precision": 0.9994050578564504,
+      "recall": 0.9994031632348552,
+      "f1-score": 0.9994032330228069,
+      "support": 6702.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1033,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      447,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      406,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      446,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      582,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      596,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      551,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1473,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      147,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      730,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      287
+    ]
+  ],
+  "confusion_matrix_label_order": [
+    "account_technical",
+    "customer_feedback",
+    "damaged_missing_items",
+    "human_triage_unknown",
+    "order_management",
+    "payments_billing",
+    "product_catalog_availability",
+    "refunds_cancellations",
+    "sales_promotions",
+    "shipping_logistics",
+    "store_information"
+  ]
+}

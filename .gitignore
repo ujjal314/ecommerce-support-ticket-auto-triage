@@ -1,32 +1,34 @@
 
-# Virtual environment and Python
-.venv/
-venv/
+# Python
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.venv/
+venv/
 
-# Secrets and local configuration
+# Secrets
 .env
 !.env.example
 
-# Local datasets
+# Dataset and local feedback
 data/raw/*
 data/processed/*
+data/feedback/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Model weights and checkpoints
-models/checkpoints/
-models/*.pt
-models/*.pth
-models/*.onnx
-
-# Generated files
-artifacts/*.pkl
+# Model artifacts (we will decide how to distribute the final model)
 artifacts/*.joblib
+artifacts/*.pkl
 artifacts/*.pt
 artifacts/*.pth
 artifacts/*.onnx
-*.log
+
+# Generated analysis
+artifacts/test_misclassified.csv
+
+# OS files
 .DS_Store
+Thumbs.db
+*.log
+!artifacts/robust_baseline_model.joblib

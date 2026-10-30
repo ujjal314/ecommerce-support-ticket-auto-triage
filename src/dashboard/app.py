@@ -2,8 +2,33 @@
 """Streamlit dashboard for e-commerce support ticket triage."""
 
 import streamlit as st
+import csv
+from datetime import datetime, timezone
+from pathlib import Path
+import uuid
 
 from src.services.triage import triage_ticket
+
+FEEDBACK_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "data"
+    / "feedback"
+    / "reviewer_feedback.csv"
+)
+
+ROUTING_LABELS = [
+    "refunds_cancellations",
+    "damaged_missing_items",
+    "shipping_logistics",
+    "account_technical",
+    "payments_billing",
+    "product_catalog_availability",
+    "order_management",
+    "store_information",
+    "customer_feedback",
+    "sales_promotions",
+    "human_triage_unknown",
+]
 
 
 st.set_page_config(
@@ -146,3 +171,64 @@ st.caption(
     "Prototype for decision support. Validate model performance "
     "and review policies before using it for live customer tickets."
 )
+
+
+if result:
+    st.divider()
+    st.subheader("4. Reviewer feedback")
+
+    st.write(
+        "If the prediction or routing decision is incorrect, "
+        "select the queue a reviewer believes is appropriate."
+    )
+
+    corrected_queue = st.selectbox(
+        "Correct queue",
+        ROUTING_LABELS,
+        key="corrected_queue",
+        format_func=lambda label: label.replace("_", " ").title(),
+    )
+
+    reviewer_notes = st.text_input(
+        "Reviewer notes (optional)",
+        key="reviewer_notes",
+        max_chars=500,
+    )
+
+    if st.button("Save reviewer feedback"):
+        FEEDBACK_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+        feedback_exists = FEEDBACK_PATH.exists()
+
+        with FEEDBACK_PATH.open(
+            "a", encoding="utf-8", newline=""
+        ) as file:
+            writer = csv.DictWriter(
+                file,
+                fieldnames=[
+                    "feedback_id",
+                    "timestamp_utc",
+                    "ticket_text",
+                    "predicted_label",
+                    "assigned_queue",
+                    "confidence",
+                    "corrected_queue",
+                    "reviewer_notes",
+                ],
+            )
+
+            if not feedback_exists or FEEDBACK_PATH.stat().st_size == 0:
+                writer.writeheader()
+
+            writer.writerow({
+                "feedback_id": str(uuid.uuid4()),
+                "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                "ticket_text": result["ticket_text"],
+                "predicted_label": result["predicted_label"],
+                "assigned_queue": result["assigned_queue"],
+                "confidence": result["confidence"],
+                "corrected_queue": corrected_queue,
+                "reviewer_notes": reviewer_notes.strip(),
+            })
+
+        st.success("Reviewer feedback saved successfully.")

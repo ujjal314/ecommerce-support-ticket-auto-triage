@@ -1,0 +1,25 @@
+ticket_text,expected_route,challenge_type
+"My parcel says delivered, but nobody at home received it.",shipping_logistics,paraphrase
+"Refund still hasn't landed in my bank after 12 days.",refunds_cancellations,paraphrase
+"Can you swap my shoes for a smaller size?",refunds_cancellations,paraphrase
+"The checkout page charged me two times for one purchase.",payments_billing,paraphrase
+"I need a copy of the invoice for last month's order.",payments_billing,paraphrase
+"Your app keeps crashing whenever I try to sign in.",account_technical,paraphrase
+"Is the blue jacket available in a medium?",product_catalog_availability,paraphrase
+"I accidentally added two units. Please remove one from my order.",order_management,paraphrase
+"What time does your Kolkata store close on Saturday?",store_information,paraphrase
+"I have an idea to make your packaging less wasteful.",customer_feedback,paraphrase
+"When will your next seasonal sale begin?",sales_promotions,paraphrase
+"My parcel hasnt arived and the tracking hasnt updated in days.",shipping_logistics,typos
+"I want a refnd for the item I sent back last week.",refunds_cancellations,typos
+"i cant loggin to my acount even after reseting pasword",account_technical,typos
+"the box came open and one of the products is missing",damaged_missing_items,paraphrase
+"I got the wrong colour and the item is also scratched.",damaged_missing_items,multi_issue
+"My order has shipped, but I need to change the delivery address.",human_review,multi_issue
+"I was charged twice and I also want to cancel the order.",human_review,multi_issue
+"I want to speak with a real person about a complicated return.",human_review,escalation
+"Someone may have accessed my account and changed my payment details.",human_review,security
+"I don't recognise a transaction on my account. Please investigate.",human_review,security
+"Can you confirm whether this link asking for my card details is legitimate?",human_review,security
+"My refund is missing, and I need to know whether the return was received.",human_review,multi_issue
+"Nothing works and I don't know which department can help me.",human_review,ambiguous
